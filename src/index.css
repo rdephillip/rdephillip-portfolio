@@ -4,12 +4,13 @@ html {
   @apply scroll-smooth;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesque", sans-serif;
   background: #000;
-  color: #f3f4f6
+  color: #f3f4f6;
 }
 
 @layer utilities {
@@ -49,4 +50,16 @@ html, body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.section-header {
+  @apply text-3xl font-bold mb-8 bg-gradient-to-r from-orange-700 to-orange-400 bg-clip-text text-transparent text-center;
+}
+
+.tags {
+  @apply bg-orange-400/10 text-orange-400 py-1 px-3 rounded-full text-sm hover:bg-orange-400/20 hover:shadow-[0_2px_8px_rgba(126,42,12,0.2)] transition;
+}
+
+.form-text {
+  @apply w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-orange-400 focus:bg-orange-400/5;
 }
