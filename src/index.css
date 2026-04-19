@@ -1,65 +1,98 @@
 @import "tailwindcss";
 
 html {
-  @apply scroll-smooth;
+  scroll-behavior: smooth;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesque", sans-serif;
-  background: #000;
+  font-family: "Space Grotesk", sans-serif;
+  background: #0f0e0d;
   color: #f3f4f6;
 }
 
-@layer utilities {
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-
-  .animate-blink {
-    animation: blink 0.8s step-end infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(250%);
-    }
-  }
-
-  .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
-  }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: height 0.6s ease, flex-direction 0.6s ease;
+  height: 100vh;
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+.hero--contracted {
+  height: 80px;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 140, 0, 0.2);
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.hero__image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 140, 0, 0.4);
+  transition: width 0.6s ease, height 0.6s ease;
 }
 
-.section-header {
-  @apply text-3xl font-bold mb-8 bg-gradient-to-r from-orange-700 to-orange-400 bg-clip-text text-transparent text-center;
+.hero--contracted .hero__image img {
+  width: 52px;
+  height: 52px;
 }
 
-.tags {
-  @apply bg-orange-400/10 text-orange-400 py-1 px-3 rounded-full text-sm hover:bg-orange-400/20 hover:shadow-[0_2px_8px_rgba(126,42,12,0.2)] transition;
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: align-items 0.6s ease;
 }
 
-.form-text {
-  @apply w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-orange-400 focus:bg-orange-400/5;
+.hero--contracted .hero__content {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FF8C00;
+  transition: font-size 0.6s ease;
+}
+
+.hero--contracted .hero__name {
+  font-size: 1.1rem;
+}
+
+.hero__tagline {
+  font-size: 1rem;
+  color: #a8a29e;
+  transition: opacity 0.6s ease, font-size 0.6s ease;
+  font-style: italic;
+}
+
+.hero--contracted .hero__tagline {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.hero__contact {
+  color: #FF8C00;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.hero__contact:hover {
+  background: rgba(255, 140, 0, 0.1);
 }
