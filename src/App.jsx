@@ -1,20 +1,26 @@
 import { useState } from 'react'
+import { Hero } from './components/sections/Hero'
+import { Projects } from './components/sections/Projects'
+import { Skills } from './components/sections/Skills'
+import { Experience } from './components/sections/Experience'
+import { Education } from './components/sections/Education'
+import { Learning } from './components/sections/Learning'
 
 function App() {
   const [heroExpanded, setHeroExpanded] = useState(true)
 
   return (
     <div className='app'>
-      <section className='hero'>
-        hero goes here
-      </section>
-
+      <Hero
+        heroExpanded={heroExpanded}
+        setHeroExpanded={setHeroExpanded}
+      />
       <main className='panels'>
-        <section className='panel'>projects</section>
-        <section className='panel'>skills</section>
-        <section className='panel'>experience</section>
-        <section className='panel'>education</section>
-        <section className='panel'>learning</section>
+        <Projects />
+        <Skills />
+        <Experience />
+        <Education />
+        <Learning />
       </main>
     </div>
   )
