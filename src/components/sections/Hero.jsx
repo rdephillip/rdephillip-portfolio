@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import profile from '../../assets/profile.png'
+import { RiLinkedinFill } from 'react-icons/ri'
 
 export const Hero = ({ heroExpanded, setHeroExpanded }) => {
     useEffect(() => {
@@ -28,7 +29,7 @@ export const Hero = ({ heroExpanded, setHeroExpanded }) => {
                     rel="noreferrer"
                     className="hero__contact"
                 >
-                    Connect on LinkedIn
+                    <RiLinkedinFill size={28} color="#FF8C00" />
                 </a>
             </div>
         </section>
