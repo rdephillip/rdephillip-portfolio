@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #0f0e0d;
+  background: #1e1c1a;
   color: #f3f4f6;
 }
 
@@ -130,7 +130,7 @@ body {
 
 .project-card {
   transition: opacity 0.3s ease, border-color 0.3s ease;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   opacity: 1;
   padding: 1.25rem;
   border-radius: 0.5rem;
@@ -157,11 +157,6 @@ body {
   color: #FF8C00;
 }
 
-.project-card__status {
-  font-style: italic;
-  font-size: smaller;
-}
-
 .project-card__description {
   color: #a8a29e;
   padding: 1rem;
@@ -171,13 +166,51 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: smaller;
 }
 
-.stack-badge {
-  background-color: #452600;
-  color:#FF8C00;
+.badge {
   padding: 0 0.5rem;
   border-radius: 9999px;
-  border: 1px solid #FF8C00;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.badge--status{
+  font-style: italic;
+}
+
+.badge--production {
+  background-color: #224e29;
+  color:#39d954;
+}
+
+.badge--dev {
+  background-color: #204544;
+  color:#2eece9;
+}
+
+.badge--maintained {
+  background-color: #4a3e00;
+  color:#f0c040;
+}
+
+.badge--language {
+  background-color: #41245b;
+  color:#bc79ff;
+}
+
+.badge--framework {
+  background-color: #4a1f1f;
+  color:#ff6b6b;
+}
+
+.badge--data {
+  background-color: #212246;
+  color:#5154ff;
+}
+
+.badge--infra {
+  background-color: #5b314f;
+  color:#e656bd;
 }
