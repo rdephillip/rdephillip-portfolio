@@ -129,6 +129,8 @@ body {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   transition: opacity 0.3s ease, border-color 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.1);
   opacity: 1;
@@ -164,8 +166,21 @@ body {
 
 .project-card__stack {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
+}
+
+.project-card__link {
+  margin-top: auto;
+  align-self: flex-end;
+  gap: 0.5rem;
+  color: #FF8C00;
+  font-style: italic;
+}
+
+.project-card__link:hover {
+  color: #CC7000;
 }
 
 .badge {

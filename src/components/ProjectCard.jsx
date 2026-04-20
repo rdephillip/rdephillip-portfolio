@@ -32,7 +32,7 @@ export const ProjectCard = ({ project, focusId, setFocusId }) => {
                         )
                     })}
             </div>
-            {project.link && <a href={project.link}>View Project</a>}
+            {project.link && <a href={project.link} className="project-card__link">View Project</a>}
         </div>
     )
 }
