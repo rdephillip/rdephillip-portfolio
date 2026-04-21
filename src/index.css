@@ -93,16 +93,11 @@ body {
 
 .hero__contact {
   color: #FF8C00;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: 1px solid rgba(255, 140, 0, 0.3);
-  padding: 0.4rem 1rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  font-size: 2.5rem;
 }
 
 .hero__contact:hover {
-  background: rgba(255, 140, 0, 0.1);
+  color: #CC7000;
 }
 
 .hero__inner {
@@ -334,6 +329,7 @@ body {
 }
 
 .learning {
+  display:flex;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;

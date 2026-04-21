@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import profile from '../../assets/profile.png'
-import { RiLinkedinFill } from 'react-icons/ri'
+import { RiLinkedinBoxFill } from 'react-icons/ri'
 
 export const Hero = ({ heroExpanded, setHeroExpanded }) => {
     const [contentVisible, setContentVisible] = useState(true)
@@ -41,7 +41,7 @@ export const Hero = ({ heroExpanded, setHeroExpanded }) => {
                         className="hero__contact"
                         aria-label="Connect on LinkedIn"
                     >
-                        <RiLinkedinFill size={28} color="#FF8C00" />
+                        <RiLinkedinBoxFill />
                     </a>
                 </div>
             </div>
