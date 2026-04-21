@@ -1,3 +1,3 @@
 export const Experience = () => {
-    return <section>experience</section>
+    return <section className="experience">experience</section>
 }

@@ -15,12 +15,12 @@ function App() {
         heroExpanded={heroExpanded}
         setHeroExpanded={setHeroExpanded}
       />
-      <main className='panels'>
+      <Learning />
+      <main className='content-wrapper'>
         <Projects />
         <Skills />
-        <Experience />
         <Education />
-        <Learning />
+        <Experience />
       </main>
     </div>
   )

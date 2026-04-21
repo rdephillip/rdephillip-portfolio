@@ -1,3 +1,3 @@
 export const Education = () => {
-    return <section>education</section>
+    return <section className="education">education</section>
 }
