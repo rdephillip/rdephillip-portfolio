@@ -247,10 +247,18 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.skill-category{
+.skill-category {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+}
+
+.skill-category + .skill-category::before {
+  content: '';
+  display: block;
+  width: 100%;
+  margin: 0 auto 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .skill-category__header {
