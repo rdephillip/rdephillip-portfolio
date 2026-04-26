@@ -441,11 +441,12 @@ body {
 
 .learning-bar__icon {
   color:#FF8C00;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .learning-bar__item {
   color:#a8a29e;
+  font-size: 0.8rem;
 }
 
 .learning-bar__item + .learning-bar__item::before {
