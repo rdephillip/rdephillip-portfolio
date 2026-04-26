@@ -1,33 +1,29 @@
-import { useState } from "react";
-import "./App.css";
-import "./index.css";
-import { LoadingScreen } from "./components/LoadingScreen";
-import { Navbar } from "./components/Navbar";
-import { MobileMenu } from "./components/MobileMenu";
-import { Home } from "./components/sections/Home";
-import { About } from "./components/sections/About";
-import { Projects } from "./components/sections/Projects";
+import { useState } from 'react'
+import { Hero } from './components/sections/Hero'
+import { Projects } from './components/sections/Projects'
+import { Skills } from './components/sections/Skills'
+import { Experience } from './components/sections/Experience'
+import { Education } from './components/sections/Education'
+import { Learning } from './components/sections/Learning'
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [heroExpanded, setHeroExpanded] = useState(true)
 
   return (
-    <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-      <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
-      >
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Home />
-        <About />
+    <div className='app'>
+      <Hero
+        heroExpanded={heroExpanded}
+        setHeroExpanded={setHeroExpanded}
+      />
+      <Learning />
+      <main className='content-wrapper'>
         <Projects />
-      </div>
-    </>
-  );
+        <Skills />
+        <Education />
+        <Experience />
+      </main>
+    </div>
+  )
 }
 
-export default App;
+export default App
